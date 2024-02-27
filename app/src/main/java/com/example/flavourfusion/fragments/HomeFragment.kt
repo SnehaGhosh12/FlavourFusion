@@ -31,6 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var popularItemsAdapter:PopularItemAdapter
     private lateinit var categoriesItemsAdapter:CategoryItemAdapter
 
+
     companion object{
         const val MEAL_ID= "com.example.flavourfusion.fragments.idMeal"
         const val MEAL_NAME= "com.example.flavourfusion.fragments.nameMeal"
@@ -91,7 +92,7 @@ class HomeFragment : Fragment() {
     private fun prepareCategoriesItemsRecyclerView() {
         categoriesItemsAdapter = CategoryItemAdapter()
         binding.recviewCategories.apply {
-            layoutManager = GridLayoutManager(context,3,GridLayoutManager.VERTICAL,false)
+            layoutManager = GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false)
             adapter= categoriesItemsAdapter
         }
     }

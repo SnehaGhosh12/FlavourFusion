@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_fav"
-        app:backgroundTint="@color/accent"
+        app:backgroundTint="@color/accent2"
         app:tint="@color/white"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|end"
@@ -64,7 +64,7 @@
                 android:orientation="horizontal"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
@@ -112,7 +112,7 @@
                 android:id="@+id/tv_instructionSteps"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#3A3A3A"
                 android:textSize="@dimen/_15ssp"
                 android:layout_marginTop="@dimen/_2sdp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_instuctions"
@@ -121,29 +121,26 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
-<!--        <ImageView-->
-<!--            android:id="@+id/play"-->
-<!--            android:layout_width="@dimen/_50sdp"-->
-<!--            android:layout_height="@dimen/_50sdp"-->
-<!--            android:layout_gravity="bottom|right"-->
-<!--            android:layout_marginEnd="@dimen/_5sdp"-->
-<!--            android:layout_marginBottom="@dimen/_10sdp"-->
-<!--            android:src="@drawable/ic_play"-->
-<!--            app:tint="#E53935"-->
-<!--            android:background="@color/white"/>-->
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/play"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_play"
-        android:backgroundTint="@color/white"
-        android:tint="@color/accent"
-        android:scaleType="center"
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_gravity="bottom|end"
-        android:layout_marginRight="@dimen/_25sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
-        />
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        app:cardUseCompatPadding="true"
+        android:elevation="@dimen/_7sdp">
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:src="@drawable/ic_play"
+            android:layout_gravity="center"
+            app:tint="#F10A0A"
+            android:scaleType="centerCrop"
+            android:background="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progress_bar"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_140sdp"
+    android:layout_width="@dimen/_150sdp"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/_5sdp"
     app:cardUseCompatPadding="true"
@@ -32,6 +32,8 @@
             android:textColor="@color/black"
             android:text="text"
             android:layout_margin="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:textAlignment="center"
             app:layout_constraintStart_toStartOf="@+id/img_meal"
             app:layout_constraintTop_toBottomOf="@+id/img_meal"
             app:layout_constraintEnd_toEndOf="@+id/img_meal"/>

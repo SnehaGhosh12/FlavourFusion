@@ -19,28 +19,47 @@
                 android:id="@+id/linear_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginStart="@dimen/_30sdp"
-                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/icon_b"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_gravity="center_vertical"/>
 
                 <TextView
                     android:id="@+id/tv_home"
-                    android:layout_weight="3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/myfont"
-                    android:text="Home"
+                    android:text="H"
+                    android:gravity="center_vertical"
                     android:textColor="@color/accent"
                     android:textSize="@dimen/_25ssp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont"
+                    android:text="OME"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_25ssp"
+                    android:textStyle="bold"
+                    />
 
                 <ImageView
                     android:id="@+id/img_search"
-                    android:layout_width="@dimen/_30sdp"
+                    android:layout_width="@dimen/_40sdp"
                     android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_search"/>
 
@@ -127,6 +146,7 @@
                 android:layout_marginStart="@dimen/_25sdp"
                 android:layout_marginEnd="@dimen/_25sdp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text3">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -141,6 +161,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@ class CategoryMealsActivity : AppCompatActivity() {
     lateinit var binding : ActivityCategoryMealsBinding
     lateinit var categoryMealsViewModel: CategoryMealsViewModel
     lateinit var categoryMealsAdapter: CategoryMealsAdapter
+    private lateinit var categoryName:String
 
 
 
@@ -33,8 +34,12 @@ class CategoryMealsActivity : AppCompatActivity() {
 
         categoryMealsViewModel.getMealsByCategory(intent.getStringExtra(HomeFragment.CATEGORY_NAME)!!)
 
+
         categoryMealsViewModel.observeMealsLiveData().observe(this, Observer { mealsList->
-            binding.tvCategoryCount.text = mealsList.size.toString()
+
+            getCategoryInfoByItem()
+            binding.tvCategorySelectedName.text=categoryName+" Item"
+//            binding.tvCategoryCount.text = mealsList..toString()
             categoryMealsAdapter.setMealsList(mealsList)
         })
     }
@@ -56,5 +61,9 @@ class CategoryMealsActivity : AppCompatActivity() {
             adapter = categoryMealsAdapter
 
         }
+    }
+    private fun getCategoryInfoByItem() {
+        val intent=intent
+        categoryName= intent.getStringExtra(HomeFragment.CATEGORY_NAME)!!
     }
 }
